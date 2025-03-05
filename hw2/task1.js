@@ -1,0 +1,16 @@
+// Напишите функцию, которая выводит текущее время в формате "часы:минуты:секунды".
+
+const getCurrentTime = () => {
+    const date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+
+    if(hours < 10) hours = '0' + hours;
+    if(minutes < 10) minutes = '0' + minutes;
+    if(seconds < 10) seconds = '0' + seconds;
+
+    return `${hours}:${minutes}:${seconds}`;
+}
+
+console.log(getCurrentTime()); // 00:22:45
